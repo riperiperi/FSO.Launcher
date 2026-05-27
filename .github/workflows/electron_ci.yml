@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
           node-version: 16
 
@@ -51,7 +51,7 @@ jobs:
             artifact_name: "fsolauncher-debian"
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v6
 
     - name: Replace Sentry DSN and Browser Loader (Windows)
       if: matrix.os == 'windows-latest'
@@ -79,13 +79,13 @@ jobs:
         mv sentry.config.temp.js sentry.config.js
       
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v6
       with:
         node-version: 16
 
     - name: Cache Electron binaries
       id: cache-electron-binaries
-      uses: actions/cache@v2
+      uses: actions/cache@v5
       with:
         path: |
           ~/.electron
@@ -97,7 +97,7 @@ jobs:
 
     - name: Cache Node.js modules
       id: cache-node-modules
-      uses: actions/cache@v2
+      uses: actions/cache@v5
       with:
         path: app/node_modules
         key: ${{ runner.os }}-node-modules-${{ hashFiles('app/package-lock.json') }}
@@ -183,7 +183,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v6
       
     - name: Get version
       uses: nyaa8/package-version@v1
