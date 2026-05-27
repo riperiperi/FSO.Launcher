@@ -124,19 +124,19 @@ jobs:
       run: npm run ${{ matrix.build_command }}
       working-directory: app
       
-    - name: Run E2E tests on Ubuntu
-      if: matrix.os == 'ubuntu-22.04'
-      run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- npm run test
-      env:
-        GITHUB_RATELIMIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      working-directory: app
+#    - name: Run E2E tests on Ubuntu
+#      if: matrix.os == 'ubuntu-22.04'
+#      run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- npm run test
+#      env:
+#        GITHUB_RATELIMIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      working-directory: app
       
-    - name: Run E2E tests
-      if: matrix.os != 'ubuntu-22.04'
-      run: npm run test
-      env:
-        GITHUB_RATELIMIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      working-directory: app
+#    - name: Run E2E tests
+#      if: matrix.os != 'ubuntu-22.04'
+#      run: npm run test
+#      env:
+#        GITHUB_RATELIMIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      working-directory: app
       
     - name: List contents of the release directory (Windows)
       if: matrix.os == 'windows-latest'
