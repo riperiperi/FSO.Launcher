@@ -126,17 +126,17 @@ const releases = {
   fsoApiUrl: 'https://api.freeso.org/userapi/update/beta',
 };
 const resourceCentral = {
-  'TheSimsOnline': 'https://beta.freeso.org/LauncherResourceCentral/TheSimsOnline',
-  'FreeSO': 'https://beta.freeso.org/LauncherResourceCentral/FreeSO',
-  '3DModels': 'https://beta.freeso.org/LauncherResourceCentral/3DModels',
-  'Simitone': 'https://beta.freeso.org/LauncherResourceCentral/Simitone',
-  'Mono': 'https://beta.freeso.org/LauncherResourceCentral/Mono',
-  'MacExtras': 'https://beta.freeso.org/LauncherResourceCentral/MacExtras',
-  'SDL': 'https://beta.freeso.org/LauncherResourceCentral/SDL',
-  'WS': 'https://beta.freeso.org/LauncherResourceCentral/ws',
-  'TrendingLots': 'https://beta.freeso.org/LauncherResourceCentral/TrendingLots',
-  'Scenarios': 'https://beta.freeso.org/LauncherResourceCentral/Scenarios',
-  'Blog': 'https://beta.freeso.org/LauncherResourceCentral/Blog'
+  'TheSimsOnline': 'https://freeso.org/redirect/TheSimsOnline',
+  'FreeSO': 'https://freeso.org/redirect/FreeSO',
+  '3DModels': 'https://freeso.org/redirect/3DModels',
+  'Simitone': 'https://freeso.org/redirect/Simitone',
+  'Mono': 'https://freeso.org/redirect/Mono',
+  'MacExtras': 'https://freeso.org/redirect/MacExtras',
+  'SDL': 'https://freeso.org/redirect/SDL',
+  'WS': 'https://freeso.org/redirect/ws',
+  'TrendingLots': 'https://freeso.org/redirect/TrendingLots',
+  'Scenarios': 'https://freeso.org/redirect/Scenarios',
+  'Blog': 'https://freeso.org/redirect/Blog'
 };
 const temp = {
   'FSO': `${appData}/temp/artifacts-freeso-%s.zip`,
