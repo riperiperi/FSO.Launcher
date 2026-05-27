@@ -21,12 +21,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Build Remeshes
-        run: |
-          npm install
-          npm run build
-        working-directory: extras/fsolauncher-remeshes
-
       - name: Build Proxy
         run: |
           npm install
@@ -38,7 +32,6 @@ jobs:
         with:
           name: fsolauncher-extras
           path: |
-            release/remeshes-*.zip
             release/proxy-*
 
   build-launcher:
@@ -306,13 +299,6 @@ jobs:
         mv release/FreeSO\ Launcher\ Setup.exe release/fsolauncher-$version.exe
         mv release/FreeSO\ Launcher.dmg release/fsolauncher-$version.dmg
         mv release/FreeSO\ Launcher.deb release/fsolauncher-$version.deb
-
-    - name: Find Remeshes File
-      id: find_remeshes_file
-      run: |
-        remeshes_file=$(ls release/remeshes-*.zip)
-        echo "REMESHES_FILE=$remeshes_file" >> $GITHUB_ENV
-        echo "Found remeshes file: $remeshes_file"
 
     - name: Find Proxy File
       id: find_proxy_file
